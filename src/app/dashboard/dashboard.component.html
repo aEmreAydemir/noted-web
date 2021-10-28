@@ -1,0 +1,24 @@
+<div id="myDiv" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput" placeholder="Title..." [(ngModel)]="task.description">
+  <span (click)="add(task)" class="addBtn">Add</span>
+</div>
+<br>
+<!---
+<div class="list">
+  <div class="item">
+  <ul id="item" *ngFor="let task of tasks">
+  <li *ngIf="!task.edit" class="description" (click)="crossOver(task)" [ngClass]="{'checked': task.checked}">{{task.description}}</li>
+  <input *ngIf="task.edit" type="text" class="editInput" [(ngModel)]="task.description" >
+  <button (click)="remove(task.userId,task.id)" class="delete">delete</button>
+  <button (click)="edit(task)" [ngClass]="{'editInput': task.edit}" class="edit">edit</button>
+  </ul>
+  </div>
+</div> --->
+
+<div class="list" *ngFor="let task of tasks">
+  <div class="description" *ngIf="!task.edit" (click)="crossOver(task)" [ngClass]="{'checked': task.checked}">{{task.description}}</div>
+  <input class="input" *ngIf="task.edit" type="text" [(ngModel)]="task.description" (change)="update(task)">
+  <button (click)="remove(task.userId,task.id)" class="delete">delete</button>
+  <button (click)="edit(task)" [ngClass]="{'editInput': task.edit}" class="edit">edit</button>
+</div>

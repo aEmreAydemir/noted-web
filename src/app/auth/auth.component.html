@@ -1,0 +1,15 @@
+
+<div class="login" *ngIf="isLogin">
+  <input type="text" name="username" placeholder="email" [(ngModel)]="userCreate.email" required>
+  <input type="password" name="password" placeholder="Password" [(ngModel)]="userCreate.password" required>
+  <input type="submit" (click)="login()" value="Login">
+  <button (click)="changeLogin()">not signed up yet?</button>
+</div>
+
+<div class="signup" *ngIf="!isLogin">
+  <input type="text" name="username" placeholder="name" [(ngModel)]="userCreate.name" required>
+  <input type="text" name="email" placeholder="email" required [(ngModel)]="userCreate.email">
+  <input type="password" name="password" placeholder="password" required [(ngModel)]="userCreate.password">
+  <input type="submit" (click)="createUser(userCreate)" value="signup">
+  <button (click)="changeLogin()">continue with login</button>
+</div>
