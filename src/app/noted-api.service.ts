@@ -11,7 +11,7 @@ import {UserCreate} from "./model/user-create.model";
 })
 
 export class NotedApiService {
-  private notedApiEndPoint = 'http://localhost:8080/';
+  private notedApiEndPoint = 'https://noted-web-api.herokuapp.com/';
 
   constructor(private http: HttpClient) {}
 
