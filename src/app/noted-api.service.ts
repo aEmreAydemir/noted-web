@@ -11,7 +11,7 @@ import {UserCreate} from "./model/user-create.model";
 })
 
 export class NotedApiService {
-  private notedApiEndPoint = environment.notedApiEndpoint;
+  private notedApiEndPoint = 'http://localhost:8080/';
 
   constructor(private http: HttpClient) {}
 
