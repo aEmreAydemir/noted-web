@@ -68,6 +68,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "port": "process.env.PORT",
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {

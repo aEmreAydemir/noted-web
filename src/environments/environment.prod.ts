@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  notedApiEndpoint: 'http://localhost:8080/',
 };
